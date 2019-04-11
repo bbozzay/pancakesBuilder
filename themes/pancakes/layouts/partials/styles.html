@@ -1,0 +1,3 @@
+{{ $main := resources.Get "scss/main.scss" | resources.ExecuteAsTemplate "style.main.scss" . | toCSS | minify }}
+
+<link rel='stylesheet' href='{{ $main.Permalink }}'/>

@@ -1,0 +1,51 @@
+.hero {
+  height: 80vh;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+}
+.hero {
+  .container {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    grid-row-end: 6;
+  }
+  img {
+    max-width: 540px;
+    margin: 0 auto;
+  }
+  .bg {
+    height: 100%;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-row-end: 8;
+  }
+  .bgLogo {
+    transform: translate(20.6%, 25.5%);
+  }
+  line {
+    stroke: #f4f4f4;
+    stroke-width: 10;
+    stroke-linecap: round;
+    stroke-dasharray: 66, 16;
+    stroke-dashoffset: 82;
+  }
+
+  line:nth-child(odd) {
+    animation: lineMove 2s infinite linear;
+  }
+
+  line:nth-child(even) {
+    animation: lineMove 2s infinite linear reverse;
+  }
+
+  #logo line {
+    stroke: #ffd05e;
+  }
+
+  @keyframes lineMove {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+}

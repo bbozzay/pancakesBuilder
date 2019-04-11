@@ -1,0 +1,125 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+body, html {
+  min-height: 100%;
+  min-width: 320px;
+  -webkit-tap-highlight-color: transparent;
+}
+body {
+  color: $oil;
+  font-family: $font-family;
+  line-height: 1.5;
+  font-feature-settings: "liga", "kern";
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  overflow-x: hidden;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+.container-fullwidth {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  box-sizing: border-box;
+}
+.container, .container-l, .container-m {
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+.container {
+  width: $container;
+}
+.container-l {
+  width: $container-l;
+}
+.container-m {
+  width: $container-m;
+}
+section {
+  margin-bottom: -1px;
+  position: relative;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: block;
+}
+
+img.fullwidth-img {
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+.mobile-break {
+  display: none;
+}
+main {
+  // padding-top: 60px;
+}
+.hide-desktop {
+  display: none;
+}
+iframe {
+  padding-bottom: 15px;
+}
+@media screen and (max-width: $screen-laptop ) {
+  .display-laptop {
+    display: block;
+  }
+  .hide-laptop {
+    display: none;
+  }
+}
+@media screen and (max-width: $screen-tablet ) {
+  .container, .container-l, .container-m {
+    padding: 0 20px;
+  }
+  .display-tablet {
+    display: block;
+  }
+  .hide-tablet {
+    display: none;
+  }
+}
+@media screen and (max-width: $screen-mobile-l ) {
+  .container, .container-l, .container-m {
+    padding: 0 20px;
+  }
+  .display-mobile {
+    display: block;
+  }
+  .mobile-break {
+    display: block;
+  }
+  .hide-mobile {
+    display: none;
+  }
+}

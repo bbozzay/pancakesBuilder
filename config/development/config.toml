@@ -1,0 +1,42 @@
+baseURL = "/"
+languageCode = "en-gb"
+title = "Pancakes Builder"
+theme = ["pancakes-dev", "pancakes"]
+
+enableRobotsTXT = true
+disableAliases = true
+disableLiveReload = false
+disableKinds = ["taxonomy","taxonomyTerm"]
+
+[permalinks]
+  pages = "/:section/:title/"
+  blog = "/:title/"
+  work = "/:sections/:slug/"
+
+[params]
+disallow_search_engines = true # set robots.txt to disallow everything
+debug_enabled = true
+favcon = ""
+# add redirects/headers
+[outputs]
+home = ["HTML", "RSS", "REDIRECTS", "HEADERS"]
+
+# remove .{ext} from text/netlify
+[mediaTypes."text/netlify"]
+suffixes = [""]
+delimiter = ""
+
+# add output format for netlify _redirects
+[outputFormats.REDIRECTS]
+mediatype = "text/netlify"
+baseName = "_redirects"
+isPlainText = true
+notAlternative = true
+
+# add output format for netlify _headers
+[outputFormats.HEADERS]
+mediatype = "text/netlify"
+baseName = "_headers"
+isPlainText = true
+notAlternative = true
+
